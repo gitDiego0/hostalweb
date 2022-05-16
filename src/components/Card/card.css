@@ -7,6 +7,11 @@ haz clases css para crear tarjetas
   padding: 1.5rem;
   background-color: #fff;
   width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card:first-child {
+  margin-top: 0;
 }
 
 .card-content {
@@ -54,6 +59,10 @@ img {
   border-top-right-radius: 5px;
 }
 
+.rating {
+  font-size: 0.951rem;
+}
+
 .star {
   background: url(/src/public/icons/star-sharp.svg) no-repeat;
 
@@ -63,4 +72,61 @@ img {
   height: 25px;
 
   background-size: 25px 20px;
+}
+
+.card-description {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.booking {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+  justify-content: center;
+}
+
+.booking button {
+  font-size: calc(10px + 2vmin);
+  border-radius: 5px;
+  padding: 1rem;
+  border: none;
+}
+
+.booking button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+.check-green {
+  background: url(/src/public/icons/checkmark.svg) no-repeat;
+
+  display: block;
+  text-indent: -9999px;
+  width: 25px;
+  height: 25px;
+
+  background-size: 25px 20px;
+  margin-top: 0.25rem;
+}
+
+.check-red {
+  background: url(/src/public/icons/close.svg) no-repeat;
+
+  display: block;
+  text-indent: -9999px;
+  width: 25px;
+  height: 25px;
+
+  background-size: 25px 20px;
+  margin-top: 0.25rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1 1 101px;
 }
