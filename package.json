@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
@@ -29,8 +30,8 @@
   },
   "eslintConfig": {
     "parser": "@babel/eslint-parser",
-    "babelOptions":{
-      "configFile":"/node_modules/@vitejs/plugin-react/babel.config.js"
+    "babelOptions": {
+      "configFile": "/node_modules/@vitejs/plugin-react/babel.config.js"
     },
     "extends": [
       "standard",
