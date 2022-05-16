@@ -1,50 +1,37 @@
-import { useState } from 'react'
-import Navbar from '../components/Navbar/Navbar'
-import logo from '../public/icons/logo.svg'
+import { useEffect, useState } from 'react'
+
 import '../App.css'
 import Layout from '../components/layout'
 import Card from '../components/Card/Card'
+import { getRooms } from '../firebase/client'
 
 function App() {
-  const [cards, setCards] = useState([
-    {
-      id: 1,
-      title: 'Card 1',
-      description: 'hola',
-      image: 'https://picsum.photos/200/300',
-      stars: 3.1,
-    },
-    {
-      id: 2,
-      title: 'Card 2',
-      description: 'hola',
-      image: 'https://picsum.photos/200/300',
-      stars: 2,
-    },
-    {
-      id: 3,
-      title: 'Card 3',
-      description: 'hola',
-      image: 'https://picsum.photos/200/300',
-      stars: 4,
-    },
-    {
-      id: 4,
-      title: 'Card 4',
-      description: 'hola',
-      image: 'https://picsum.photos/200/300',
-      stars: 4.5,
-    },
-  ])
+  const [rooms, setRooms] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  const Spinner = () => {
+    return <div className="spinner"></div>
+  }
+
+  useEffect(() => {
+    getRooms().then((rooms) => {
+      setRooms(rooms)
+      setLoading(false)
+    })
+  }, [])
 
   return (
     <div className="App">
       <Layout>
-        <>
-          {cards.map((card) => {
-            return <Card key={card.id} {...card} />
-          })}
-        </>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <>
+            {rooms.map((room, id) => {
+              return <Card key={room.id} {...room} />
+            })}
+          </>
+        )}
       </Layout>
     </div>
   )
