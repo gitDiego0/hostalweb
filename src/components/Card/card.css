@@ -4,7 +4,7 @@ haz clases css para crear tarjetas
 
 .card {
   margin-top: 1rem;
-  padding: 1.5rem;
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
   background-color: #fff;
   width: 100%;
   border-bottom: 1px solid #e0e0e0;
@@ -77,6 +77,7 @@ img {
 .card-description {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 0.75rem;
 }
 
 .booking {
@@ -88,7 +89,6 @@ img {
 }
 
 .booking button {
-  font-size: calc(10px + 2vmin);
   border-radius: 5px;
   padding: 1rem;
   border: none;
@@ -110,6 +110,8 @@ img {
 
   background-size: 25px 20px;
   margin-top: 0.25rem;
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+    brightness(100%) contrast(119%);
 }
 
 .check-red {
@@ -122,6 +124,8 @@ img {
 
   background-size: 25px 20px;
   margin-top: 0.25rem;
+  filter: invert(40%) sepia(46%) saturate(2282%) hue-rotate(-30deg)
+    brightness(100%) contrast(100%);
 }
 
 .item {
