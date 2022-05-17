@@ -16,7 +16,9 @@ export default function Card({ nombre, descripcion, imagenes, stars = 4.2 }) {
       <div className="card-content">
         <div className="card-header">
           <div className="card-title">
-            <span className="title-4">{nombre} </span>
+            <span className="title-4">
+              {nombre.charAt(0).toUpperCase() + nombre.slice(1)}
+            </span>
             <span className="subtitle-4">¡Disponible!</span>
           </div>
           <div className="card-rating">
