@@ -11,7 +11,8 @@
     "firebase": "^9.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
