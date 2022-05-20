@@ -4,6 +4,8 @@ import '../App.css'
 import Layout from '../components/layout'
 import Card from '../components/Card/Card'
 import { getRooms } from '../firebase/client'
+import DatePicker from '../components/DatePicker/DatePicker'
+import { ContextWrapper } from '../contexts/dateContext'
 
 function App() {
   const [rooms, setRooms] = useState([])
@@ -27,6 +29,7 @@ function App() {
           <Spinner />
         ) : (
           <>
+            <DatePicker />
             {rooms.map((room, id) => {
               return <Card key={room.id} {...room} />
             })}
