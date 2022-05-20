@@ -1,7 +1,16 @@
+import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { DateContext } from '../../contexts/dateContext'
 import './card.css'
 
-export default function Card({ nombre, descripcion, imagenes, stars = 4.2 }) {
-  console.log(descripcion)
+export default function Card({
+  id,
+  nombre,
+  descripcion,
+  imagenes,
+  stars = 4.2,
+}) {
+  const context = useContext(DateContext)
   return (
     <div className="card">
       <div className="card-image">
@@ -63,7 +72,13 @@ export default function Card({ nombre, descripcion, imagenes, stars = 4.2 }) {
         </div>
 
         <div className="booking">
-          <button>¡RESERVAR AHORA!</button>
+          <Link
+            to={{
+              pathname: '/booking/' + id,
+            }}
+          >
+            ¡RESERVAR AHORA!
+          </Link>
         </div>
       </div>
     </div>
