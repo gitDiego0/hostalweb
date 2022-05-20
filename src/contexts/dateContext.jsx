@@ -1,14 +1,11 @@
 import { useState, createContext } from 'react'
+import { addDaysToDate, getToday } from '../components/utils/getDate'
 
 export const DateContext = createContext()
 
 export const ContextWrapper = (props) => {
-  const [dateIn, setDateIn] = useState(new Date())
-  const [dateOut, setDateOut] = useState(new Date())
-  // const [store, setStore] = useState({
-  //   dateIn: new Date(),
-  //   dateOut: new Date(),
-  // })
+  const [dateIn, setDateIn] = useState(getToday())
+  const [dateOut, setDateOut] = useState(addDaysToDate(new Date(dateIn), 1))
 
   const [actions, setActions] = useState({
     setDateIn: (date) => {
