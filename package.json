@@ -30,7 +30,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.29.4",
-    "vite": "^2.9.9"
+    "vite": "^2.9.9",
+    "vite-plugin-compression": "^0.5.1"
   },
   "eslintConfig": {
     "parser": "@babel/eslint-parser",
