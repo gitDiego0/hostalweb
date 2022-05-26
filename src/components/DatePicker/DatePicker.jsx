@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react'
 import { DateContext } from '../../contexts/dateContext'
-import { getToday, addDaysToDate } from '../utils/getDate'
+import { getToday, addDaysToDate } from '../../utils/getDate'
 import './datepicker.css'
 
 export default function DatePicker() {
