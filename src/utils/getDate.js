@@ -20,3 +20,13 @@ export const addDaysToDate = (date, days) => {
   mm < 10 ? `0${mm}` : mm
   return `${yyyy}-${mm}-${dd}`
 }
+
+export const getDays = (dateIn, dateOut) => {
+  const oneDay = 24 * 60 * 60 * 1000
+  const firstDate = new Date(dateIn)
+  const secondDate = new Date(dateOut)
+  const diffDays = Math.round(
+    Math.abs((firstDate.getTime() - secondDate.getTime()) / oneDay)
+  )
+  return diffDays
+}
