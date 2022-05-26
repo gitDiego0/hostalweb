@@ -1,5 +1,5 @@
 import { useState, createContext } from 'react'
-import { addDaysToDate, getToday } from '../components/utils/getDate'
+import { addDaysToDate, getToday } from '../utils/getDate'
 
 export const DateContext = createContext()
 
