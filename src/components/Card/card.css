@@ -84,14 +84,24 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.25rem;
+  gap: 2rem;
   justify-content: center;
 }
 
-.booking button {
+.booking-btn {
   border-radius: 5px;
-  padding: 1rem;
+  padding: 0.75rem;
   border: none;
+  background: #ffc107;
+  color: #fff;
+}
+
+.booking-btn a {
+  text-decoration: none;
+}
+
+.booking-btn a:visited {
+  color: #fff;
 }
 
 .booking button:hover {
