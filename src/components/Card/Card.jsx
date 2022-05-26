@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
-import { DateContext } from '../../contexts/dateContext'
 import './card.css'
 
 export default function Card({
@@ -9,8 +7,17 @@ export default function Card({
   descripcion,
   imagenes,
   stars = 4.2,
+  precio,
+  personas_max,
+  personas_min,
 }) {
-  const context = useContext(DateContext)
+  const data = {
+    id: id,
+    name: nombre,
+    precio: precio,
+    personas_max: personas_max,
+    personas_min: personas_min,
+  }
   return (
     <div className="card">
       <div className="card-image">
@@ -72,13 +79,18 @@ export default function Card({
         </div>
 
         <div className="booking">
-          <Link
-            to={{
-              pathname: '/booking/' + id,
-            }}
-          >
-            ¡RESERVAR AHORA!
-          </Link>
+          <span>{precio}€</span>
+          <div className="booking-btn">
+            <Link
+              state={data}
+              to={{
+                pathname: '/booking/' + id,
+                search: '?dateIn=2020-06-01&dateOut=2020-06-02',
+              }}
+            >
+              ¡RESERVAR AHORA!
+            </Link>
+          </div>
         </div>
       </div>
     </div>
